@@ -22,13 +22,28 @@ Partial Class frmFindMember
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblLastName = New System.Windows.Forms.Label()
         Me.txtLastName = New System.Windows.Forms.TextBox()
         Me.btnGo = New System.Windows.Forms.Button()
+        Me.dgvMambers = New System.Windows.Forms.DataGridView()
+        Me.KarateDataSet = New KarateSchoolManager.karateDataSet()
+        Me.KarateDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MembersTableAdapter = New KarateSchoolManager.karateDataSetTableAdapters.MembersTableAdapter()
+        Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PhoneDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DateJoinedDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.dgvMambers, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KarateDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KarateDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -37,7 +52,7 @@ Partial Class frmFindMember
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(470, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(570, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -83,11 +98,86 @@ Partial Class frmFindMember
         Me.btnGo.Text = "Find"
         Me.btnGo.UseVisualStyleBackColor = True
         '
+        'dgvMambers
+        '
+        Me.dgvMambers.AllowUserToAddRows = False
+        Me.dgvMambers.AllowUserToDeleteRows = False
+        Me.dgvMambers.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvMambers.AutoGenerateColumns = False
+        Me.dgvMambers.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dgvMambers.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvMambers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvMambers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.LastNameDataGridViewTextBoxColumn, Me.FirstNameDataGridViewTextBoxColumn, Me.PhoneDataGridViewTextBoxColumn, Me.DateJoinedDataGridViewTextBoxColumn})
+        Me.dgvMambers.DataSource = Me.MembersBindingSource
+        Me.dgvMambers.Location = New System.Drawing.Point(28, 126)
+        Me.dgvMambers.Name = "dgvMambers"
+        Me.dgvMambers.ReadOnly = True
+        Me.dgvMambers.RowHeadersVisible = False
+        Me.dgvMambers.Size = New System.Drawing.Size(507, 150)
+        Me.dgvMambers.TabIndex = 4
+        '
+        'KarateDataSet
+        '
+        Me.KarateDataSet.DataSetName = "karateDataSet"
+        Me.KarateDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'KarateDataSetBindingSource
+        '
+        Me.KarateDataSetBindingSource.DataSource = Me.KarateDataSet
+        Me.KarateDataSetBindingSource.Position = 0
+        '
+        'MembersBindingSource
+        '
+        Me.MembersBindingSource.DataMember = "Members"
+        Me.MembersBindingSource.DataSource = Me.KarateDataSetBindingSource
+        '
+        'MembersTableAdapter
+        '
+        Me.MembersTableAdapter.ClearBeforeFill = True
+        '
+        'IDDataGridViewTextBoxColumn
+        '
+        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
+        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
+        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
+        Me.IDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'LastNameDataGridViewTextBoxColumn
+        '
+        Me.LastNameDataGridViewTextBoxColumn.DataPropertyName = "Last_Name"
+        Me.LastNameDataGridViewTextBoxColumn.HeaderText = "Last_Name"
+        Me.LastNameDataGridViewTextBoxColumn.Name = "LastNameDataGridViewTextBoxColumn"
+        Me.LastNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'FirstNameDataGridViewTextBoxColumn
+        '
+        Me.FirstNameDataGridViewTextBoxColumn.DataPropertyName = "First_Name"
+        Me.FirstNameDataGridViewTextBoxColumn.HeaderText = "First_Name"
+        Me.FirstNameDataGridViewTextBoxColumn.Name = "FirstNameDataGridViewTextBoxColumn"
+        Me.FirstNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PhoneDataGridViewTextBoxColumn
+        '
+        Me.PhoneDataGridViewTextBoxColumn.DataPropertyName = "Phone"
+        Me.PhoneDataGridViewTextBoxColumn.HeaderText = "Phone"
+        Me.PhoneDataGridViewTextBoxColumn.Name = "PhoneDataGridViewTextBoxColumn"
+        Me.PhoneDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DateJoinedDataGridViewTextBoxColumn
+        '
+        Me.DateJoinedDataGridViewTextBoxColumn.DataPropertyName = "Date_Joined"
+        Me.DateJoinedDataGridViewTextBoxColumn.HeaderText = "Date_Joined"
+        Me.DateJoinedDataGridViewTextBoxColumn.Name = "DateJoinedDataGridViewTextBoxColumn"
+        Me.DateJoinedDataGridViewTextBoxColumn.ReadOnly = True
+        '
         'frmFindMember
         '
+        Me.AcceptButton = Me.btnGo
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(470, 322)
+        Me.ClientSize = New System.Drawing.Size(570, 322)
+        Me.Controls.Add(Me.dgvMambers)
         Me.Controls.Add(Me.btnGo)
         Me.Controls.Add(Me.txtLastName)
         Me.Controls.Add(Me.lblLastName)
@@ -103,6 +193,10 @@ Partial Class frmFindMember
         Me.Text = "Find Member by Last Name"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.dgvMambers, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KarateDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KarateDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -114,4 +208,14 @@ Partial Class frmFindMember
     Friend WithEvents lblLastName As Label
     Friend WithEvents txtLastName As TextBox
     Friend WithEvents btnGo As Button
+    Friend WithEvents dgvMambers As DataGridView
+    Friend WithEvents KarateDataSetBindingSource As BindingSource
+    Friend WithEvents KarateDataSet As karateDataSet
+    Friend WithEvents MembersBindingSource As BindingSource
+    Friend WithEvents MembersTableAdapter As karateDataSetTableAdapters.MembersTableAdapter
+    Friend WithEvents IDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents LastNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FirstNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PhoneDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DateJoinedDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
