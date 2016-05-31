@@ -28,4 +28,8 @@
     Private Sub AllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AllToolStripMenuItem.Click
         frmAllPayments.ShowDialog()
     End Sub
+
+    Private Sub OneMemberToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OneMemberToolStripMenuItem.Click
+        frmOneMember.ShowDialog()
+    End Sub
 End Class
