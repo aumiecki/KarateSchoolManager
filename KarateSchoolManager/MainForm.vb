@@ -24,4 +24,8 @@
     Private Sub FindMemberToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FindMemberToolStripMenuItem.Click
         frmFindMember.ShowDialog()
     End Sub
+
+    Private Sub AllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AllToolStripMenuItem.Click
+        frmAllPayments.ShowDialog()
+    End Sub
 End Class

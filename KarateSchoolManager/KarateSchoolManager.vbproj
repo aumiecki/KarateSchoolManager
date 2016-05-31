@@ -84,6 +84,12 @@
     <Compile Include="AllMembersForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AllPaymentsForm.Designer.vb">
+      <DependentUpon>AllPaymentsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AllPaymentsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FindMemberForm.Designer.vb">
       <DependentUpon>FindMemberForm.vb</DependentUpon>
     </Compile>
@@ -124,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AllMembersForm.resx">
       <DependentUpon>AllMembersForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllPaymentsForm.resx">
+      <DependentUpon>AllPaymentsForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindMemberForm.resx">
       <DependentUpon>FindMemberForm.vb</DependentUpon>
