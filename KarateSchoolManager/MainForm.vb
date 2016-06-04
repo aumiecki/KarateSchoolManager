@@ -25,10 +25,12 @@
         frmFindMember.ShowDialog()
     End Sub
 
+    ' Open All Payments form
     Private Sub AllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AllToolStripMenuItem.Click
         frmAllPayments.ShowDialog()
     End Sub
 
+    ' Open One Member form
     Private Sub OneMemberToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OneMemberToolStripMenuItem.Click
         frmOneMember.ShowDialog()
     End Sub
