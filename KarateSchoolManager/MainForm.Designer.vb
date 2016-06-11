@@ -36,6 +36,9 @@ Partial Class MainForm
         Me.PaymentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OneMemberToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InstructorsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AllToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FindOneToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -79,7 +82,7 @@ Partial Class MainForm
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.MembershipToolStripMenuItem, Me.PaymentsToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.MembershipToolStripMenuItem, Me.PaymentsToolStripMenuItem, Me.InstructorsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(514, 24)
@@ -134,14 +137,33 @@ Partial Class MainForm
         'AllToolStripMenuItem
         '
         Me.AllToolStripMenuItem.Name = "AllToolStripMenuItem"
-        Me.AllToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AllToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
         Me.AllToolStripMenuItem.Text = "All"
         '
         'OneMemberToolStripMenuItem
         '
         Me.OneMemberToolStripMenuItem.Name = "OneMemberToolStripMenuItem"
-        Me.OneMemberToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OneMemberToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
         Me.OneMemberToolStripMenuItem.Text = "One Member"
+        '
+        'InstructorsToolStripMenuItem
+        '
+        Me.InstructorsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AllToolStripMenuItem1, Me.FindOneToolStripMenuItem})
+        Me.InstructorsToolStripMenuItem.Name = "InstructorsToolStripMenuItem"
+        Me.InstructorsToolStripMenuItem.Size = New System.Drawing.Size(75, 20)
+        Me.InstructorsToolStripMenuItem.Text = "Instructors"
+        '
+        'AllToolStripMenuItem1
+        '
+        Me.AllToolStripMenuItem1.Name = "AllToolStripMenuItem1"
+        Me.AllToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.AllToolStripMenuItem1.Text = "All"
+        '
+        'FindOneToolStripMenuItem
+        '
+        Me.FindOneToolStripMenuItem.Name = "FindOneToolStripMenuItem"
+        Me.FindOneToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.FindOneToolStripMenuItem.Text = "Find One"
         '
         'MainForm
         '
@@ -183,4 +205,7 @@ Partial Class MainForm
     Friend WithEvents PaymentsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AllToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OneMemberToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InstructorsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AllToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents FindOneToolStripMenuItem As ToolStripMenuItem
 End Class

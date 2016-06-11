@@ -49,6 +49,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -78,6 +79,12 @@
     <Compile Include="AddMemberForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AllInstructorsForm.Designer.vb">
+      <DependentUpon>AllInstructorsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AllInstructorsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AllMembersForm.Designer.vb">
       <DependentUpon>AllMembersForm.vb</DependentUpon>
     </Compile>
@@ -90,11 +97,22 @@
     <Compile Include="AllPaymentsForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FindInstructorForm.Designer.vb">
+      <DependentUpon>FindInstructorForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FindInstructorForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FindMemberForm.Designer.vb">
       <DependentUpon>FindMemberForm.vb</DependentUpon>
     </Compile>
     <Compile Include="FindMemberForm.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KarateClasses.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KarateClasses.dbml</DependentUpon>
     </Compile>
     <Compile Include="karateDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -134,15 +152,24 @@
     <EmbeddedResource Include="AddMemberForm.resx">
       <DependentUpon>AddMemberForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AllInstructorsForm.resx">
+      <DependentUpon>AllInstructorsForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AllMembersForm.resx">
       <DependentUpon>AllMembersForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AllPaymentsForm.resx">
       <DependentUpon>AllPaymentsForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FindInstructorForm.resx">
+      <DependentUpon>FindInstructorForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FindMemberForm.resx">
       <DependentUpon>FindMemberForm.vb</DependentUpon>
     </EmbeddedResource>
+    <None Include="KarateClasses.dbml.layout">
+      <DependentUpon>KarateClasses.dbml</DependentUpon>
+    </None>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +184,11 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="KarateClasses.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>KarateClasses.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="karateDataSet.xsc">
       <DependentUpon>karateDataSet.xsd</DependentUpon>
     </None>
@@ -178,6 +210,9 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -29,21 +29,21 @@ Partial Class frmFindMember
         Me.lblLastName = New System.Windows.Forms.Label()
         Me.txtLastName = New System.Windows.Forms.TextBox()
         Me.btnGo = New System.Windows.Forms.Button()
-        Me.dgvMambers = New System.Windows.Forms.DataGridView()
-        Me.KarateDataSet = New KarateSchoolManager.karateDataSet()
-        Me.KarateDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MembersTableAdapter = New KarateSchoolManager.karateDataSetTableAdapters.MembersTableAdapter()
+        Me.dgvMembers = New System.Windows.Forms.DataGridView()
         Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PhoneDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateJoinedDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KarateDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KarateDataSet = New KarateSchoolManager.karateDataSet()
+        Me.MembersTableAdapter = New KarateSchoolManager.karateDataSetTableAdapters.MembersTableAdapter()
         Me.MenuStrip1.SuspendLayout()
-        CType(Me.dgvMambers, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.KarateDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.KarateDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvMembers, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KarateDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KarateDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -66,7 +66,7 @@ Partial Class frmFindMember
         'CloseToolStripMenuItem
         '
         Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
-        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
         Me.CloseToolStripMenuItem.Text = "Close"
         '
         'lblLastName
@@ -84,7 +84,7 @@ Partial Class frmFindMember
         '
         Me.txtLastName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtLastName.Location = New System.Drawing.Point(120, 59)
-        Me.txtLastName.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtLastName.Margin = New System.Windows.Forms.Padding(4)
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.Size = New System.Drawing.Size(141, 22)
         Me.txtLastName.TabIndex = 2
@@ -98,43 +98,24 @@ Partial Class frmFindMember
         Me.btnGo.Text = "Find"
         Me.btnGo.UseVisualStyleBackColor = True
         '
-        'dgvMambers
+        'dgvMembers
         '
-        Me.dgvMambers.AllowUserToAddRows = False
-        Me.dgvMambers.AllowUserToDeleteRows = False
-        Me.dgvMambers.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.dgvMembers.AllowUserToAddRows = False
+        Me.dgvMembers.AllowUserToDeleteRows = False
+        Me.dgvMembers.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvMambers.AutoGenerateColumns = False
-        Me.dgvMambers.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.dgvMambers.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dgvMambers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvMambers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.LastNameDataGridViewTextBoxColumn, Me.FirstNameDataGridViewTextBoxColumn, Me.PhoneDataGridViewTextBoxColumn, Me.DateJoinedDataGridViewTextBoxColumn})
-        Me.dgvMambers.DataSource = Me.MembersBindingSource
-        Me.dgvMambers.Location = New System.Drawing.Point(28, 126)
-        Me.dgvMambers.Name = "dgvMambers"
-        Me.dgvMambers.ReadOnly = True
-        Me.dgvMambers.RowHeadersVisible = False
-        Me.dgvMambers.Size = New System.Drawing.Size(507, 150)
-        Me.dgvMambers.TabIndex = 4
-        '
-        'KarateDataSet
-        '
-        Me.KarateDataSet.DataSetName = "karateDataSet"
-        Me.KarateDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'KarateDataSetBindingSource
-        '
-        Me.KarateDataSetBindingSource.DataSource = Me.KarateDataSet
-        Me.KarateDataSetBindingSource.Position = 0
-        '
-        'MembersBindingSource
-        '
-        Me.MembersBindingSource.DataMember = "Members"
-        Me.MembersBindingSource.DataSource = Me.KarateDataSetBindingSource
-        '
-        'MembersTableAdapter
-        '
-        Me.MembersTableAdapter.ClearBeforeFill = True
+        Me.dgvMembers.AutoGenerateColumns = False
+        Me.dgvMembers.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dgvMembers.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvMembers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.LastNameDataGridViewTextBoxColumn, Me.FirstNameDataGridViewTextBoxColumn, Me.PhoneDataGridViewTextBoxColumn, Me.DateJoinedDataGridViewTextBoxColumn})
+        Me.dgvMembers.DataSource = Me.MembersBindingSource
+        Me.dgvMembers.Location = New System.Drawing.Point(28, 126)
+        Me.dgvMembers.Name = "dgvMembers"
+        Me.dgvMembers.ReadOnly = True
+        Me.dgvMembers.RowHeadersVisible = False
+        Me.dgvMembers.Size = New System.Drawing.Size(507, 150)
+        Me.dgvMembers.TabIndex = 4
         '
         'IDDataGridViewTextBoxColumn
         '
@@ -171,13 +152,32 @@ Partial Class frmFindMember
         Me.DateJoinedDataGridViewTextBoxColumn.Name = "DateJoinedDataGridViewTextBoxColumn"
         Me.DateJoinedDataGridViewTextBoxColumn.ReadOnly = True
         '
+        'MembersBindingSource
+        '
+        Me.MembersBindingSource.DataMember = "Members"
+        Me.MembersBindingSource.DataSource = Me.KarateDataSetBindingSource
+        '
+        'KarateDataSetBindingSource
+        '
+        Me.KarateDataSetBindingSource.DataSource = Me.KarateDataSet
+        Me.KarateDataSetBindingSource.Position = 0
+        '
+        'KarateDataSet
+        '
+        Me.KarateDataSet.DataSetName = "karateDataSet"
+        Me.KarateDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'MembersTableAdapter
+        '
+        Me.MembersTableAdapter.ClearBeforeFill = True
+        '
         'frmFindMember
         '
         Me.AcceptButton = Me.btnGo
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(570, 322)
-        Me.Controls.Add(Me.dgvMambers)
+        Me.Controls.Add(Me.dgvMembers)
         Me.Controls.Add(Me.btnGo)
         Me.Controls.Add(Me.txtLastName)
         Me.Controls.Add(Me.lblLastName)
@@ -185,7 +185,7 @@ Partial Class frmFindMember
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmFindMember"
@@ -193,10 +193,10 @@ Partial Class frmFindMember
         Me.Text = "Find Member by Last Name"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        CType(Me.dgvMambers, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.KarateDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.KarateDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvMembers, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KarateDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KarateDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -208,7 +208,7 @@ Partial Class frmFindMember
     Friend WithEvents lblLastName As Label
     Friend WithEvents txtLastName As TextBox
     Friend WithEvents btnGo As Button
-    Friend WithEvents dgvMambers As DataGridView
+    Friend WithEvents dgvMembers As DataGridView
     Friend WithEvents KarateDataSetBindingSource As BindingSource
     Friend WithEvents KarateDataSet As karateDataSet
     Friend WithEvents MembersBindingSource As BindingSource

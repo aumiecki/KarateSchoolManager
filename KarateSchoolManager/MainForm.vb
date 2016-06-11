@@ -34,4 +34,14 @@
     Private Sub OneMemberToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OneMemberToolStripMenuItem.Click
         frmOneMember.ShowDialog()
     End Sub
+
+    ' Open All Instructors form
+    Private Sub AllToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles AllToolStripMenuItem1.Click
+        frmAllInstructors.ShowDialog()
+    End Sub
+
+    ' Open Find One form
+    Private Sub FindOneToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FindOneToolStripMenuItem.Click
+        frmFindInstructor.ShowDialog()
+    End Sub
 End Class
